@@ -1,0 +1,48 @@
+<HTML>
+
+<head>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script src="script.js"></script>
+  <style>
+    body{
+      margin:0;
+      overflow:hidden;
+    }
+    iframe{
+      opacity:0;
+      pointer-events:none;
+      position:absolute;
+      border:0;
+      transform: scale(1.3);
+      transition:opacity .7s, transform .7s;
+    }
+    iframe.visible{
+      opacity:1;
+      pointer-events:auto;
+      transform: scale(1);
+      transition:opacity .7s, transform .7s;
+    }
+    #control{
+      position:absolute;
+      bottom:0;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:100;
+    }
+  </style>
+</head>
+
+<body>
+  <iframe id="id1" class="visible" src="_20odakyu" name="sample" width="100%" height="100%"></iframe>
+  <iframe id="id2" src="_20odakyu2" name="sample" width="100%" height="100%"></iframe>
+  <iframe id="id3" src="_20odakyu3" name="sample" width="100%" height="100%"></iframe>
+  <iframe id="id4" src="_20odakyu4" name="sample" width="100%" height="100%"></iframe>
+  <div id="control">
+    <input type="button" value="scene1" class="id1">
+    <input type="button" value="scene2" class="id2">
+    <input type="button" value="scene3" class="id3">
+    <input type="button" value="scene4" class="id4">
+  </div>
+</body>
+
+</HTML>
